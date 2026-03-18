@@ -1,0 +1,85 @@
+/* Кнопка открытия панели */
+#sv-toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    user-select: none;
+}
+#sv-toggle-button:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
+#sv-toggle-button:focus {
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.5);
+}
+
+/* Панель настроек */
+#sv-panel {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    width: 280px;
+    padding: 15px;
+    z-index: 9998;
+    display: none;
+    border: 1px solid #ddd;
+}
+#sv-panel.sv-visible {
+    display: block;
+}
+.sv-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 8px;
+}
+.sv-row {
+    margin-bottom: 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.sv-btn {
+    background: #ecf0f1;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2c3e50;
+    transition: 0.2s;
+    flex: 1 0 auto;
+    font-weight: 500;
+    border: 1px solid #bdc3c7;
+}
+.sv-btn:hover {
+    background: #e67e22;
+    color: white;
+    border-color: #e67e22;
+}
+.sv-btn:focus {
+    outline: 2px solid #e67e22;
+    outline-offset: 2px;
+}
+
+/* Чёрно-белый режим */
+body.sv-grayscale {
+    filter: grayscale(100%);
+}
